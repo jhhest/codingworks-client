@@ -8,7 +8,7 @@ The app should make it easy to find a job, just by swiping. You can swipe right 
 ## Brainstorm.
 
 Here as an image of my initial brainstorm of the project. I used this brainstorm to make a start with the app.
-![Initial Brainstorm](documentation/first_brainstorm.jpeg)
+![Initial Brainstorm](documentationCodingworks/first_brainstorm.jpeg)
 
 ## Usecases
 
@@ -30,6 +30,11 @@ Here as an image of my initial brainstorm of the project. I used this brainstorm
 - As an employer i want to be able to see which people reacted to my job offer.
 - As an employer i want to be able to select some criteria that are important to my job offer.
 - As an employer i want to be able to invite people for a job offer.
+
+## Datamodel
+
+In this picture you can see an inital drawing of the datamodel. It is a simple model, just to get starting.
+![Initial Brainstorm](documentationCodingworks/dataModels/model1.png)
 
 ## Planning.
 
