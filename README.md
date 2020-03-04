@@ -36,6 +36,16 @@ Here as an image of my initial brainstorm of the project. I used this brainstorm
 In this picture you can see an inital drawing of the datamodel. It is a simple model, just to get starting.
 ![Initial Brainstorm](documentationCodingworks/dataModels/model1.png)
 
+## Sofware requirements
+
+### Postgress.
+
+I use postgress as database. I initialize postgress with docker using the following terminal command.
+
+```bash
+docker run -p 5432:5432 --name codingworks-pg-server -e POSTGRES_PASSWORD=password -d postgres
+```
+
 ## Planning.
 
 ### Version 1:
