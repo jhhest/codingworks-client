@@ -6,7 +6,6 @@ import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Welcome from "./pages/Welcome";
-
 export class App extends Component {
   render() {
     return (
