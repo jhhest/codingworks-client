@@ -43,7 +43,7 @@ This is the second version of the datamodel.
 * I want to be able to create a user so i added an user table.
 The jobApplicant entity and the company entity can both refer to the user entity.
 * When a jobApplicant an jobOffer have matching parameters, i want to be able to put that information in my database. I made a seperate entity to keep track of the technologies that can be used in my app. Also i want to be able to keep track of which technologies are in a jobOffer and a jobApplicationAccount, therefore i created a table called technologie matches. 
-![Datamodel version 2](documentationCodingworks/dataModels/model2.png)
+![Datamodel version 2](documentationCodingworks/dataModels/model3.png)
 
 ## Sofware requirements
 
