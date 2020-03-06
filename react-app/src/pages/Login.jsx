@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-// import LoginForm from "../../src/components/LoginForm";
+import LoginForm from "../../src/components/LoginForm";
 
 export class Login extends Component {
   render() {
@@ -7,7 +7,7 @@ export class Login extends Component {
       <Fragment>
         <h1>Welcome to the login page!</h1>
         <p>You can signUp using our login form:</p>
-        {/* <LoginForm /> */}
+        <LoginForm />
       </Fragment>
     );
   }
