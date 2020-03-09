@@ -1,38 +1,10 @@
-body {
+/* body {
     background-color: lightgray;
 }
     
 .root {
   display: "flex";
-}
-
-.appBar {
-  transition: margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,
-    width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
-}
-
-.appBarShift {
-  width: calc(100% - 240px);
-  margin-left: 240px;
-  transition: margin 225ms cubic-bezier(0, 0, 0.2, 1) 0ms,
-    width 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-}
-.menuButton {
-  margin-right: 16px;
-}
-
-.hide {
-  display: none;
-}
-
-.drawer {
-  width: 240px;
-  flex-shrink: 0;
-}
-
-.drawerPaper {
-  width: 240px;
-}
+} */
 
 .drawerHeader {
   display: flex;
@@ -47,7 +19,7 @@ body {
   }
 }
 @media (min-width: 600px) {
-  .drawerHeader     {
+  .drawerHeader {
     min-height: 64px;
   }
 }

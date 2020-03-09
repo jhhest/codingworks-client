@@ -1,35 +1,15 @@
-import React, { Fragment, Component } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Container, StylesProvider } from "@material-ui/core";
+import clsx from "clsx";
+import React, { Component, Fragment } from "react";
+import { Route, Switch } from "react-router-dom";
 
+import styles from "./App.module.css";
+import Appbar from "./components/appbar/Appbar";
+import AppDrawer from "./components/drawer/AppDrawer";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
 import Signup from "./pages/signup";
 import Welcome from "./pages/Welcome";
-
-import clsx from "clsx";
-import {
-  Drawer,
-  AppBar,
-  Toolbar,
-  List,
-  Typography,
-  Divider,
-  IconButton,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  StylesProvider,
-  Container
-} from "@material-ui/core";
-
-import {
-  Menu as MenuIcon,
-  ChevronLeft as ChevronLeftIcon,
-  Inbox as InboxIcon,
-  Mail as MailIcon
-} from "@material-ui/icons";
-
-import styles from "./App.module.css";
 
 export class App extends Component {
   state = {
@@ -48,65 +28,8 @@ export class App extends Component {
     return (
       <Fragment>
         <StylesProvider injectFirst>
-          <AppBar
-            // className={clsx(styles.appBar, {
-            //   [styles.appBarShift]: open
-            // })}
-          >
-            <Toolbar>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={this.handleDrawerOpen}
-                edge="start"
-                // className={clsx(styles.menuButton, open && styles.hide)}
-              >
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" noWrap>
-                Coders Network
-              </Typography>
-            </Toolbar>
-          </AppBar>
-          <Drawer
-            className={styles.drawer}
-            variant="persistent"
-            anchor="left"
-            open={open}
-            // classes={{
-            //   paper: styles.drawerPaper
-            // }}
-          >
-            <div>
-              <IconButton onClick={this.handleDrawerClose}>
-                <ChevronLeftIcon />
-              </IconButton>
-            </div>
-            <Divider />
-            <List>
-              {["Inbox", "Starred", "Send email", "Drafts"].map(
-                (text, index) => (
-                  <ListItem button key={text}>
-                    <ListItemIcon>
-                      {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                    </ListItemIcon>
-                    <ListItemText primary={text} />
-                  </ListItem>
-                )
-              )}
-            </List>
-            <Divider />
-            <List>
-              {["All mail", "Trash", "Spam"].map((text, index) => (
-                <ListItem button key={text}>
-                  <ListItemIcon>
-                    {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-                  </ListItemIcon>
-                  <ListItemText primary={text} />
-                </ListItem>
-              ))}
-            </List>
-          </Drawer>
+          <Appbar handleDrawerOpen={this.handleDrawerOpen} open={open} />
+          <AppDrawer open={open} handleDrawerClose={this.handleDrawerClose} />
           <main
             className={clsx(styles.content, {
               [styles.contentShift]: open
