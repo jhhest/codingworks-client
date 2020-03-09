@@ -1,0 +1,65 @@
+body {
+    background-color: lightgray;
+}
+    
+.root {
+  display: "flex";
+}
+
+.appBar {
+  transition: margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms,
+    width 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+}
+
+.appBarShift {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  transition: margin 225ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+    width 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+.menuButton {
+  margin-right: 16px;
+}
+
+.hide {
+  display: none;
+}
+
+.drawer {
+  width: 240px;
+  flex-shrink: 0;
+}
+
+.drawerPaper {
+  width: 240px;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  padding: 0px 8px;
+  min-height: 56px;
+  justify-content: flex-end;
+}
+@media (min-width: 0px) and (orientation: landscape) {
+  .drawerHeader {
+    min-height: 48px;
+  }
+}
+@media (min-width: 600px) {
+  .drawerHeader     {
+    min-height: 64px;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  padding: 24px;
+  transition: margin 195ms cubic-bezier(0.4, 0, 0.6, 1) 0ms;
+  margin-left: 0;
+}
+
+.contentShift {
+  transition: margin 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  margin-left: 240px;
+}
