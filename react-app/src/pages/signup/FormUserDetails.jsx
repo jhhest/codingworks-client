@@ -17,7 +17,7 @@ export class FormUserDetails extends Component {
       <Fragment>
         <Container maxWidth="xs">
           <Grid>
-            <Typography component="h1" variant="h5" align="center">
+            <Typography component="h1" variant="h5" align="center" style={{margin: "1rem 0rem"}}>
               Please fill in your contact details
             </Typography>
             <form>
@@ -29,7 +29,6 @@ export class FormUserDetails extends Component {
                     onChange={handleChange("firstName")}
                     defaultValue={values.firstName}
                     required
-                    margin="normal"
                     autoComplete="fname"
                   />
                 </Grid>
@@ -40,7 +39,6 @@ export class FormUserDetails extends Component {
                     onChange={handleChange("lastName")}
                     defaultValue={values.lastName}
                     required
-                    margin="normal"
                     fullWidth
                     autoComplete="lname"
                   />
@@ -52,7 +50,6 @@ export class FormUserDetails extends Component {
                     onChange={handleChange("email")}
                     defaultValue={values.email}
                     required
-                    margin="normal"
                     fullWidth
                     autoComplete="email"
                   />
@@ -65,7 +62,6 @@ export class FormUserDetails extends Component {
                     onChange={handleChange("telephoneNumber")}
                     defaultValue={values.telephoneNumber}
                     required
-                    margin="normal"
                     fullWidth
                   />
                 </Grid>
@@ -79,7 +75,6 @@ export class FormUserDetails extends Component {
                     // style={styles.button}
                     onClick={this.continue}
                     fullWidth
-                    margin="normal"
                   >
                     continue
                   </Button>
@@ -93,10 +88,10 @@ export class FormUserDetails extends Component {
   }
 }
 
-const styles = {
-  button: {
-    margin: 15
-  }
-};
+// const styles = {
+//   button: {
+//     margin: 15
+//   }
+// };
 
 export default FormUserDetails;

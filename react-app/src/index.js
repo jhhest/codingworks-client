@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -6,23 +6,25 @@ import { BrowserRouter as Router } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store/store";
 
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+// import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
 
-const theme = createMuiTheme({});
+// const theme = createMuiTheme({});
 
 ReactDOM.render(
-  <ThemeProvider theme={theme}>
+  // <ThemeProvider theme={theme}>
+  <Fragment>
     <CssBaseline />
     <Provider store={store}>
       <Router>
         <App />
       </Router>
     </Provider>
-  </ThemeProvider>,
+    {/* </ThemeProvider>, */}
+  </Fragment>,
   document.getElementById("root")
 );
 

@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import FormUserDetails from "./FormUserDetails";
 import FormPersonalDetails from "./FormPersonalDetails";
+import { Paper } from "@material-ui/core";
 import Confirm from "./Confirm";
+import Succes from "./Sucess";
+import Password from "./Password";
 export class Signup extends Component {
   state = {
     step: 1,
@@ -57,25 +60,75 @@ export class Signup extends Component {
     switch (step) {
       case 1:
         return (
-          <FormUserDetails
-            nextStep={this.nextStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
+          <Paper
+            elevation={3}
+            style={{ padding: "1rem 0rem 3rem 0rem", margin: "1rem" }}
+          >
+            <FormUserDetails
+              nextStep={this.nextStep}
+              handleChange={this.handleChange}
+              values={values}
+            />
+          </Paper>
         );
       case 2:
         return (
-          <FormPersonalDetails
-            nextStep={this.nextStep}
-            prevStep={this.prevStep}
-            handleChange={this.handleChange}
-            values={values}
-          />
+          <Paper
+            elevation={3}
+            style={{ padding: "1rem 0rem 3rem 0rem", margin: "1rem" }}
+          >
+            <FormPersonalDetails
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              handleChange={this.handleChange}
+              values={values}
+            />
+          </Paper>
         );
       case 3:
-        return <Confirm />;
+        return (
+          <Paper
+            elevation={3}
+            style={{ padding: "1rem 0rem 3rem 0rem", margin: "1rem" }}
+          >
+            <Password
+              values={values}
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+              handleChange={this.handleChange}
+            />
+          </Paper>
+        );
       case 4:
-        return <h1>succes</h1>;
+        return (
+          <Paper
+            elevation={3}
+            style={{ padding: "1rem 0rem 3rem 0rem", margin: "1rem" }}
+          >
+            <Confirm
+              values={values}
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+            />
+          </Paper>
+        );
+      case 5:
+        return (
+          <Paper
+            elevation={3}
+            style={{ padding: "1rem 0rem 3rem 0rem", margin: "1rem" }}
+          >
+            <Succes
+              values={values}
+              nextStep={this.nextStep}
+              prevStep={this.prevStep}
+            />
+          </Paper>
+        );
+      default:
+        return (
+          <p>Oops. something went wrong. Please Contact your adminstrator.</p>
+        );
     }
   }
 }

@@ -21,7 +21,12 @@ export class FormPersonalDetails extends Component {
       <div>
         <Container maxWidth="xs">
           <Grid>
-            <Typography component="h1" variant="h5" align="center">
+            <Typography
+              component="h1"
+              variant="h5"
+              align="center"
+              style={{ padding: "1rem" }}
+            >
               Please fill in your personal details.
             </Typography>
             <form>
@@ -50,16 +55,17 @@ export class FormPersonalDetails extends Component {
                   margin="normal"
                   fullWidth
                 />
-                <Grid container spacing={2}>
+                <Grid container style={{ marginTop: "2rem" }} spacing={4}>
                   <Grid item xs={6}>
                     <Button
                       variant="contained"
                       color="primary"
                       // style={styles.button}
-                      onClick={this.continue}
+                      onClick={this.previous}
                       margin="normal"
+                      fullWidth
                     >
-                      next
+                      Previous
                     </Button>
                   </Grid>
                   <Grid item xs={6}>
@@ -69,8 +75,9 @@ export class FormPersonalDetails extends Component {
                       // style={styles.button}
                       onClick={this.continue}
                       margin="normal"
+                      fullWidth
                     >
-                      Previous
+                      next
                     </Button>
                   </Grid>
                 </Grid>
