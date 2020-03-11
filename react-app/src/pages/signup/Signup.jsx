@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import FormUserDetails from "./FormUserDetails";
+import FormPersonalDetails from "./FormPersonalDetails";
+import Confirm from "./Confirm";
 export class Signup extends Component {
   state = {
     step: 1,
@@ -58,13 +60,20 @@ export class Signup extends Component {
           <FormUserDetails
             nextStep={this.nextStep}
             handleChange={this.handleChange}
-            values={this.handleChange}
+            values={values}
           />
         );
       case 2:
-        return <h1>FormPersonalDetails</h1>;
+        return (
+          <FormPersonalDetails
+            nextStep={this.nextStep}
+            prevStep={this.prevStep}
+            handleChange={this.handleChange}
+            values={values}
+          />
+        );
       case 3:
-        return <h1>Confirm</h1>;
+        return <Confirm />;
       case 4:
         return <h1>succes</h1>;
     }

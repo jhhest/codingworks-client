@@ -8,7 +8,7 @@ import Appbar from "./components/appbar/Appbar";
 import AppDrawer from "./components/drawer/AppDrawer";
 import Footer from "./components/Footer";
 import Login from "./pages/Login";
-import Signup from "./pages/signup";
+import Signup from "./pages/signup/Signup";
 import Welcome from "./pages/Welcome";
 
 export class App extends Component {

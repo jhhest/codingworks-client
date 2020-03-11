@@ -22,8 +22,8 @@ const Appbar = ({ open, handleDrawerOpen }) => {
         >
           <MenuIcon />
         </IconButton>
-        <Typography variant="h6" noWrap>
-          Coders Network
+        <Typography variant="h5" noWrap>
+          Coding Works
         </Typography>
       </Toolbar>
     </AppBar>
