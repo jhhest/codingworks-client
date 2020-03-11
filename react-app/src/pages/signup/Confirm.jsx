@@ -1,13 +1,5 @@
-import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Grid,
-  TextField,
-  List,
-  ListItem,
-  Typography
-} from "@material-ui/core";
+import { Button, Grid, List, ListItem, Typography } from "@material-ui/core";
+import React, { Component, Fragment } from "react";
 export class Confirm extends Component {
   continue = event => {
     event.preventDefault();
@@ -22,7 +14,7 @@ export class Confirm extends Component {
     console.log("values:", values);
 
     return (
-      <Container maxWidth="xs">
+      <Fragment>
         <Typography
           component="h1"
           variant="h5"
@@ -67,7 +59,7 @@ export class Confirm extends Component {
             </Button>
           </Grid>
         </Grid>
-      </Container>
+      </Fragment>
     );
   }
 }

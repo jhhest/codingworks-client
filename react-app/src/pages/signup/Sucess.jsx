@@ -1,11 +1,5 @@
+import { Button, Container, Grid, Typography } from "@material-ui/core";
 import React, { Component } from "react";
-import {
-  Button,
-  Container,
-  Grid,
-  TextField,
-  Typography
-} from "@material-ui/core";
 export class Sucess extends Component {
   previous = event => {
     event.preventDefault();
@@ -22,7 +16,10 @@ export class Sucess extends Component {
         >
           Submit and make an account.
         </Typography>
-        <p>You almost finished your registration. Select the submit button to complete the registration process.</p>
+        <p>
+          You almost finished your registration. Select the submit button to
+          complete the registration process.
+        </p>
         <Grid container style={{ marginTop: "2rem" }} spacing={4}>
           <Grid item xs={6}>
             <Button

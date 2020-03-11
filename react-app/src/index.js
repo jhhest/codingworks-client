@@ -1,16 +1,12 @@
-import React, { Fragment } from "react";
-
-import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-
-import { Provider } from "react-redux";
-import store from "./store/store";
-
 // import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
-
-import * as serviceWorker from "./serviceWorker";
+import React, { Fragment } from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import store from "./store/store";
 
 // const theme = createMuiTheme({});
 

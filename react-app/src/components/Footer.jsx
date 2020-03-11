@@ -1,5 +1,5 @@
+import { Container, Grid, Link, Typography } from "@material-ui/core";
 import React, { Component } from "react";
-import { Typography, Link, Container, Grid } from "@material-ui/core";
 
 export class Footer extends Component {
   render() {
@@ -7,11 +7,7 @@ export class Footer extends Component {
       <Container maxWidth="xs">
         <Grid container spacing={6}>
           <Grid item>
-            <Typography
-              align="center"
-              variant="body2"
-              color="textSecondary"
-            >
+            <Typography align="center" variant="body2" color="textSecondary">
               {"Copyright © "}
               <Link color="inherit" href="#">
                 Coding Works
