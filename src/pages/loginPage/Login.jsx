@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import LoginForm from "../../src/components/LoginForm";
+import LoginForm from "../../pages/loginPage/LoginForm";
 
 export class Login extends Component {
   render() {

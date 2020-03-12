@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { login } from "../store/auth/action";
+import { login } from "../../store/auth/action";
 
 export class Login extends Component {
   state = {
@@ -27,7 +27,8 @@ export class Login extends Component {
         <h2>Login</h2>
         <p>Please Login to proceed</p>
         <form onSubmit={this.handleLogin}>
-          <p>actions
+          <p>
+            actions
             <label htmlFor="userName">Username:</label>
             <input
               type="text"

@@ -7,7 +7,7 @@ import styles from "./App.module.css";
 import Appbar from "./components/appbar/Appbar";
 import AppDrawer from "./components/drawer/AppDrawer";
 import Footer from "./components/Footer";
-import Login from "./pages/Login";
+import Login from "./pages/loginPage/Login";
 import Signup from "./pages/signup/Signup";
 import Welcome from "./pages/Welcome";
 
