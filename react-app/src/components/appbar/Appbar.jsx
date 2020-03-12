@@ -2,6 +2,7 @@ import { AppBar, IconButton, Toolbar, Typography } from "@material-ui/core";
 import clsx from "clsx";
 import React from "react";
 import styles from "./Appbar.module.css";
+import { DeveloperMode as LogoIcon } from "@material-ui/icons";
 
 import { Menu as MenuIcon } from "@material-ui/icons";
 
@@ -23,7 +24,7 @@ const Appbar = ({ open, handleDrawerOpen }) => {
           <MenuIcon />
         </IconButton>
         <Typography variant="h5" noWrap>
-          Coding Works
+          <LogoIcon /> Coding Works
         </Typography>
       </Toolbar>
     </AppBar>

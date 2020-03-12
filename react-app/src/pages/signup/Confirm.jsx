@@ -1,9 +1,9 @@
 import { Button, Grid, List, ListItem, Typography } from "@material-ui/core";
 import React, { Component, Fragment } from "react";
 export class Confirm extends Component {
-  continue = event => {
+  createAccount = event => {
     event.preventDefault();
-    this.props.nextStep();
+    this.props.createAccount();
   };
   previous = event => {
     event.preventDefault();
@@ -21,7 +21,7 @@ export class Confirm extends Component {
           align="center"
           style={{ padding: "1rem" }}
         >
-          We received the following Data
+          Account Creation
         </Typography>
         <p>Please check if we received the correct information.</p>
         <List>
@@ -45,17 +45,16 @@ export class Confirm extends Component {
               Previous
             </Button>
           </Grid>
-          <List></List>
           <Grid item xs={6}>
             <Button
               variant="contained"
               color="primary"
               // style={styles.button}
-              onClick={this.continue}
+              onClick={this.createAccount}
               margin="normal"
               fullWidth
             >
-              next
+              Create Account
             </Button>
           </Grid>
         </Grid>

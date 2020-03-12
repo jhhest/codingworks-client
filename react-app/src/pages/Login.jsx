@@ -5,8 +5,8 @@ export class Login extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Welcome to the login page!</h1>
-        <p>You can signUp using our login form:</p>
+        <h1>Login</h1>
+        <p>Please fill in your credentials</p>
         <LoginForm />
       </Fragment>
     );

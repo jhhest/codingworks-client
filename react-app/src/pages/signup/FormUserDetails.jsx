@@ -20,7 +20,7 @@ export class FormUserDetails extends Component {
           </Typography>
           <form>
             <Grid container spacing={2}>
-              <Grid item xs>
+              <Grid item xs={12} sm={6}>
                 <TextField
                   label="First name"
                   variant="outlined"
@@ -28,9 +28,10 @@ export class FormUserDetails extends Component {
                   defaultValue={values.firstName}
                   required
                   autoComplete="fname"
+                  fullWidth
                 />
               </Grid>
-              <Grid item xs>
+              <Grid item xs={12} sm={6}>
                 <TextField
                   label="Last name"
                   variant="outlined"

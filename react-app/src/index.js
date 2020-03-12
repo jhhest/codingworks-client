@@ -1,4 +1,4 @@
-// import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import { CssBaseline } from "@material-ui/core";
 import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
@@ -8,19 +8,21 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import store from "./store/store";
 
-// const theme = createMuiTheme({});
+const theme = createMuiTheme({
+  spacing: 8
+});
 
 ReactDOM.render(
-  // <ThemeProvider theme={theme}>
-  <Fragment>
-    <CssBaseline />
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
-    </Provider>
-    {/* </ThemeProvider>, */}
-  </Fragment>,
+  <ThemeProvider theme={theme}>
+    <Fragment>
+      <CssBaseline />
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    </Fragment>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
