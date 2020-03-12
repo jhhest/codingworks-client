@@ -4,7 +4,7 @@ import React from "react";
 
 const DrawerListItem = ({ link, icon: Icon, pageName }) => {
   return (
-    <Link to={link} color="inherit">
+    <Link to={link} style={{ textDecoration: "none", color: "midnightblue" }}>
       <ListItem button>
         <ListItemIcon>
           <Icon />

@@ -5,13 +5,13 @@ import {
   Container,
   FormControlLabel,
   Grid,
-  Link,
   TextField,
   Typography,
   Paper
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export class Login extends Component {
   render() {
@@ -61,7 +61,7 @@ export class Login extends Component {
                 </Link> */}
               </Grid>
               <Grid item>
-                <Link href="/login" variant="body2">
+                <Link to="/signup">
                   <p>Don't have an account? Sign Up</p>
                 </Link>
               </Grid>
