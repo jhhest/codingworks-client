@@ -29,6 +29,7 @@ export class FormUserDetails extends Component {
                   required
                   autoComplete="fname"
                   fullWidth
+                  autoFocus
                 />
               </Grid>
               <Grid item xs={12} sm={6}>

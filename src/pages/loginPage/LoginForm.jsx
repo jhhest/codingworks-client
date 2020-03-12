@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { login } from "../../store/auth/action";
-
+import {
+  Button,
+  Grid,
+  TextField,
+  Typography,
+  Container
+} from "@material-ui/core";
 export class Login extends Component {
   state = {
     userName: "",
@@ -24,7 +30,14 @@ export class Login extends Component {
   render() {
     return (
       <section>
-        <h2>Login</h2>
+        <Typography
+          component="h2"
+          variant="h5"
+          align="center"
+          style={{ paddingBottom: "1rem" }}
+        >
+          Login
+        </Typography>
         <p>Please Login to proceed</p>
         <form onSubmit={this.handleLogin}>
           <p>
