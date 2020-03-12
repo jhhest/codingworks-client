@@ -38,16 +38,20 @@ Here as an image of my initial brainstorm of the project. I used this brainstorm
 In this picture you can see an inital drawing of the datamodel. It is a simple model, just to get starting. I.e.: I want a jobapplicant to be able to login.
 ![Initial Datamodel](documentationCodingworks/dataModels/model1.png)
 
-### Datamodel version 2. 
-This is the second version of the datamodel. 
-* I want to be able to create a user so i added an user table.
-The jobApplicant entity and the company entity can both refer to the user entity.
-* When a jobApplicant an jobOffer have matching parameters, i want to be able to put that information in my database. I made a seperate entity to keep track of the technologies that can be used in my app. Also i want to be able to keep track of which technologies are in a jobOffer and a jobApplicationAccount, therefore i created a table called technologie matches. 
-![Datamodel version 2](documentationCodingworks/dataModels/model2b.png)
+### Datamodel version 2.
+
+This is the second version of the datamodel.
+
+- I want to be able to create a user so i added an user table.
+  The jobApplicant entity and the company entity can both refer to the user entity.
+- When a jobApplicant an jobOffer have matching parameters, i want to be able to put that information in my database. I made a seperate entity to keep track of the technologies that can be used in my app. Also i want to be able to keep track of which technologies are in a jobOffer and a jobApplicationAccount, therefore i created a table called technologie matches.
+  ![Datamodel version 2](documentationCodingworks/dataModels/model2b.png)
 
 ## Wireframes
+
 ![Welcome/loginpage](documentationCodingworks/wireframes/homepage.png)
-### Loginscreen / welcomepage 
+
+### Loginscreen / welcomepage
 
 ## Sofware requirements
 
@@ -64,6 +68,9 @@ docker run -p 5432:5432 --name codingworks-pg-server -e POSTGRES_PASSWORD=passwo
 ### Version 1:
 
 - [ ] Make a basic app where users can sign-up, login and find a job.
+- [ ] Make a Welcome page.
+- [ ] Make a Signup Page.
+- [ ] Make a Login Page.
 
 #### Version 1.1 Start of project.
 

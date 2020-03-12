@@ -1,20 +1,28 @@
-import React from "react";
-
+import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { CssBaseline } from "@material-ui/core";
+import React, { Fragment } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router } from "react-router-dom";
-
 import { Provider } from "react-redux";
-import store from "./store/store"
-
-import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+import store from "./store/store";
+
+const theme = createMuiTheme({
+  spacing: 8
+});
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router>
-      <App />
-    </Router>
-  </Provider>,
+  <ThemeProvider theme={theme}>
+    <Fragment>
+      <CssBaseline />
+      <Provider store={store}>
+        <Router>
+          <App />
+        </Router>
+      </Provider>
+    </Fragment>
+  </ThemeProvider>,
   document.getElementById("root")
 );
 
