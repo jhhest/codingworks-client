@@ -1,19 +1,37 @@
 import {
   Avatar,
   Button,
-  Checkbox,
   Container,
-  FormControlLabel,
   Grid,
+  Paper,
   TextField,
-  Typography,
-  Paper
+  Typography
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { login } from "../../store/auth/actions";
+import { connect } from "react-redux";
+class Login extends Component {
+  state = {
+    email: "",
+    password: ""
+  };
 
-export class Login extends Component {
+  handleChangeInput = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  handleLogin = event => {
+    console.log("handle submit is bein called.");
+    event.preventDefault();
+    const { email, password } = this.state;
+    console.log("How does login look like? ", login);
+    this.props.login(email, password);
+  };
+
   render() {
     return (
       <Container component="main" maxWidth="xs">
@@ -24,7 +42,7 @@ export class Login extends Component {
           <Typography component="h1" variant="h5" align="center">
             Sign in
           </Typography>
-          <form noValidate>
+          <form onSubmit={this.handleLogin}>
             <TextField
               variant="outlined"
               margin="normal"
@@ -35,6 +53,7 @@ export class Login extends Component {
               name="email"
               autoComplete="email"
               autoFocus
+              onChange={this.handleChangeInput}
             />
             <TextField
               variant="outlined"
@@ -46,11 +65,12 @@ export class Login extends Component {
               type="password"
               id="password"
               autoComplete="current-password"
+              onChange={this.handleChangeInput}
             />
-            <FormControlLabel
+            {/* <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
-            />
+            /> */}
             <Button type="submit" fullWidth variant="contained" color="primary">
               Sign In
             </Button>
@@ -72,5 +92,6 @@ export class Login extends Component {
     );
   }
 }
+// const mapStateToProps = state => ({ login: login });
 
-export default Login;
+export default connect(() => ({}), { login })(Login);
