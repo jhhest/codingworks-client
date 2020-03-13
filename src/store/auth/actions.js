@@ -32,7 +32,7 @@ export const login = (email, password, history) => {
               jwt
             }
           });
-          // history.push("/profile");
+          history.push("/profile");
         }
       )
       .catch(error => console.error(error));

@@ -10,7 +10,7 @@ import {
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { login } from "../../store/auth/actions";
+import { login as loginUser } from "../../store/auth/actions";
 import { connect } from "react-redux";
 class Login extends Component {
   state = {
@@ -28,11 +28,12 @@ class Login extends Component {
     console.log("handle submit is bein called.");
     event.preventDefault();
     const { email, password } = this.state;
-    console.log("How does login look like? ", login);
-    this.props.login(email, password);
+    console.log("How does login look like? ", loginUser);
+    this.props.dispatch(loginUser(email, password, this.props.history));
   };
 
   render() {
+    console.log("value of this.props in Login.jsx", this.props);
     return (
       <Container component="main" maxWidth="xs">
         <Paper elevation={3} style={{ padding: "2rem" }}>
@@ -92,6 +93,6 @@ class Login extends Component {
     );
   }
 }
-// const mapStateToProps = state => ({ login: login });
+const mapStateToProps = state => ({ loginUser: loginUser });
 
-export default connect(() => ({}), { login })(Login);
+export default connect(mapStateToProps)(Login);
