@@ -1,12 +1,11 @@
 import { Button, Grid, TextField, Typography } from "@material-ui/core";
-import React, { Component, Fragment } from "react";
-export class FormUserDetails extends Component {
-  continue = event => {
-    event.preventDefault();
-    this.props.nextStep();
+import React, { Fragment } from "react";
+
+const FormUserDetails = ({nextStep, handleChange, values}) => {
+  const nextItem = e => {
+    e.preventDefault();
+    nextStep();
   };
-  render() {
-    const { values, handleChange } = this.props;
     return (
       <Fragment>
         <Grid>
@@ -18,7 +17,7 @@ export class FormUserDetails extends Component {
           >
             Please fill in your contact details
           </Typography>
-          <form>
+          <form onSubmit={nextItem}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -51,6 +50,7 @@ export class FormUserDetails extends Component {
                   defaultValue={values.email}
                   required
                   fullWidth
+                  type="email"
                   autoComplete="email"
                 />
               </Grid>
@@ -58,7 +58,7 @@ export class FormUserDetails extends Component {
                 <TextField
                   label="Telephone number"
                   variant="outlined"
-                  type="number"
+                  type="tel"
                   onChange={handleChange("telephoneNumber")}
                   defaultValue={values.telephoneNumber}
                   required
@@ -73,8 +73,8 @@ export class FormUserDetails extends Component {
                   variant="contained"
                   color="primary"
                   // style={styles.button}
-                  onClick={this.continue}
                   fullWidth
+                  type="submit"
                 >
                   continue
                 </Button>
@@ -84,7 +84,6 @@ export class FormUserDetails extends Component {
         </Grid>
       </Fragment>
     );
-  }
 }
 
 // const styles = {

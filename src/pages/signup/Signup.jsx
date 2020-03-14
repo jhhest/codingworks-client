@@ -6,7 +6,7 @@ import Confirm from "./Confirm";
 import FormPersonalDetails from "./FormPersonalDetails";
 import FormUserDetails from "./FormUserDetails";
 import Password from "./Password";
-import Succes from "./Sucess";
+import Success from "./Success";
 
 export class Signup extends Component {
   state = {
@@ -92,7 +92,7 @@ export class Signup extends Component {
       case 1:
         return (
           <Container maxWidth="xs">
-            <Paper elevation={3} style={{ padding: "2rem", margin: "1rem" }}>
+            <Paper elevation={3} style={paperStyle}>
               <FormUserDetails
                 nextStep={this.nextStep}
                 handleChange={this.handleChange}
@@ -104,7 +104,7 @@ export class Signup extends Component {
       case 2:
         return (
           <Container maxWidth="sm">
-            <Paper elevation={3} style={{ padding: "2rem", margin: "1rem" }}>
+            <Paper elevation={3} style={paperStyle}>
               <FormPersonalDetails
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
@@ -117,7 +117,7 @@ export class Signup extends Component {
       case 3:
         return (
           <Container maxWidth="sm">
-            <Paper elevation={3} style={{ padding: "2rem", margin: "1rem" }}>
+            <Paper elevation={3} style={paperStyle}>
               <Password
                 values={values}
                 nextStep={this.nextStep}
@@ -130,7 +130,7 @@ export class Signup extends Component {
       case 4:
         return (
           <Container maxWidth="sm">
-            <Paper elevation={3} style={{ padding: "2rem", margin: "1rem" }}>
+            <Paper elevation={3} style={paperStyle}>
               <Confirm
                 values={values}
                 createAccount={this.createAccount}
@@ -142,8 +142,8 @@ export class Signup extends Component {
       case 5:
         return (
           <Container maxWidth="sm">
-            <Paper elevation={3} style={{ padding: "2rem", margin: "1rem" }}>
-              <Succes
+            <Paper elevation={3} style={paperStyle}>
+              <Success
                 values={values}
                 nextStep={this.nextStep}
                 prevStep={this.prevStep}
@@ -159,4 +159,5 @@ export class Signup extends Component {
   }
 }
 
+const paperStyle = { padding: "2rem", margin: "1rem" };
 export default Signup;
