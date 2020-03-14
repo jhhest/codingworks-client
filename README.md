@@ -1,92 +1,93 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# codingworks-client
 
-## Available Scripts
+## Initial Description of Project.
 
-In the project directory, you can run:
+Development of an app that matches a job offer with a job applicant. The app should make it easy to find a job, just by swiping. You can swipe right to apply to a job. You can swipe left to deny a job offer.
 
-### `npm start`
+## Brainstorm.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Here as an image of my initial brainstorm of the project. I used this brainstorm to make a start with the app. Initial Brainstorm
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Usecases
 
-### `npm test`
+### Usecases for Jobapplicant.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- As an user i want to be able to sign up.
+- As an user i want to be able to setup my profile in easy way.
+- As an user user i want to be able to edit my profile.
+- As an user i want to be able to set some criteria's for a job i am looking for.
+- As an user i want to be able to edit my profile.
+- As an user i will be able to find a matching job offer in an easy way.
 
-### `npm run build`
+### Usecases for employer
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- As an employer i want to be able to sign up in an easy way.
+- As an employer i want to be able to edit my profile.
+- As an employer i want to be able to post a job offer.
+- As an employer i want to be able to find an matching employee based on requirements needed for the job.
+- As an employer i want to be able to see which people reacted to my job offer.
+- As an employer i want to be able to select some criteria that are important to my job offer.
+- As an employer i want to be able to invite people for a job offer.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Datamodel
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### Datamodel version 1
 
-### `npm run eject`
+In this picture you can see an inital drawing of the datamodel. It is a simple model, just to get starting. I.e.: I want a jobapplicant to be able to login. Initial Datamodel
 
-<<<<<<< HEAD
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Datamodel version 1](documentationCodingworks/dataModels/model1.png)
+#### Datamodel version 2.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-=======
-### Datamodel version 2.
+- I want to be able to create a user so i added an user table. The jobApplicant entity and the company entity can both refer to the user entity.
+- When a jobApplicant an jobOffer have matching parameters, i want to be able to put that information in my database. I made a seperate entity to keep track of the technologies that can be used in my app. Also i want to be able to keep track of which technologies are in a jobOffer and a jobApplicationAccount, therefore i created a table called technologie matches. Datamodel version 2
 
-This is the second version of the datamodel.
+![Datamodel version 2](documentationCodingworks/dataModels/model2b.png)
 
-- I want to be able to create a user so i added an user table.
-  The jobApplicant entity and the company entity can both refer to the user entity.
-- When a jobApplicant an jobOffer have matching parameters, i want to be able to put that information in my database. I made a seperate entity to keep track of the technologies that can be used in my app. Also i want to be able to keep track of which technologies are in a jobOffer and a jobApplicationAccount, therefore i created a table called technologie matches.
-  ![Datamodel version 2](documentationCodingworks/dataModels/model2b.png)
-
-## Wireframes
+### Wireframes
 
 ![Welcome/loginpage](documentationCodingworks/wireframes/homepage.png)
 
 ### Loginscreen / welcomepage
->>>>>>> 5fd0d2644bcdb8370d779c447e7e8a53a87bb0d2
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Sofware requirements
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Postgress.
 
-## Learn More
+I use postgress as database. I initialize postgress with docker using the following terminal command.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+docker run -p 5432:5432 --name codingworks-pg-server -e POSTGRES_PASSWORD=password -d postgres
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Planning.
 
-### Code Splitting
+### Version 1:
 
-<<<<<<< HEAD
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-=======
 - [ ] Make a basic app where users can sign-up, login and find a job.
 - [ ] Make a Welcome page.
 - [ ] Make a Signup Page.
 - [ ] Make a Login Page.
->>>>>>> 5fd0d2644bcdb8370d779c447e7e8a53a87bb0d2
 
-### Analyzing the Bundle Size
+#### Version 1.1 Start of project.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- [ ] Start making backend API and implement basic datamodel.
 
-### Making a Progressive Web App
+#### 1.2 Create simple user interface.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- [ ]Create simple user interface where a user is able to signup, login and view a joboffer.
 
-### Advanced Configuration
+#### Version 2.0. Extend Datamodel with more requirements to math a joboffer with a job applicant.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+#### Version 3.0. Extend
 
-### Deployment
+#### Things to plan.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- define requirements for job applications.
+- Define type of developer.
+- define skillsets.
+- define additional requirements for job application.
+- Add a chat functionality.
+- Add a conformation email during signup process.
+- Implement swiping feature.
+- Create a profile setup.
+- Implement questionaire during initial profile setup.

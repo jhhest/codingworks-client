@@ -1,6 +1,6 @@
 import { Button, Grid, TextField, Typography } from "@material-ui/core";
 import React, { Fragment } from "react";
-const FormPersonalDetails = (values, handleChange, nextStep, prevStep) => {
+const FormPersonalDetails = ({ values, handleChange, nextStep, prevStep }) => {
   const continueNext = event => {
     event.preventDefault();
     nextStep();
@@ -52,7 +52,7 @@ const FormPersonalDetails = (values, handleChange, nextStep, prevStep) => {
                   variant="contained"
                   color="primary"
                   // style={styles.button}
-                  onClick={this.previous}
+                  onClick={previous}
                   margin="normal"
                   fullWidth
                 >
