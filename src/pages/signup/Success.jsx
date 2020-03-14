@@ -1,6 +1,6 @@
 import { Button, Container, Grid, Typography } from "@material-ui/core";
 import React, { Component } from "react";
-export class Sucess extends Component {
+class Success extends Component {
   previous = event => {
     event.preventDefault();
     this.props.prevStep();
@@ -39,4 +39,4 @@ export class Sucess extends Component {
   }
 }
 
-export default Sucess;
+export default Success;

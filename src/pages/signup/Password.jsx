@@ -28,7 +28,7 @@ export class FormPersonalDetails extends Component {
             Please fill in a password. Keep it safe! You will be needing it when
             you want to login!.
           </p>
-          <form>
+          <form onSubmit={this.continue}>
             <Grid item xs={12}>
               <TextField
                 label="Password"
@@ -59,9 +59,9 @@ export class FormPersonalDetails extends Component {
                   variant="contained"
                   color="primary"
                   // style={styles.button}
-                  onClick={this.continue}
                   margin="normal"
                   fullWidth
+                  type="submit"
                 >
                   next
                 </Button>
